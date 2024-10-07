@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(245, 245, 146);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h1,
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.inputBox {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+
+}
+
+.insideInputBox {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+}
