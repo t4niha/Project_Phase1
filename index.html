@@ -2,45 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+        News Lens
+    </title>
     <link rel="stylesheet" href="frontend/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <div>
-        <h1>NewsLens</h1>
-        <h3>Get to know your news better</h2>
-    </div>
-    <div class="inputBox">
-        <div class="insideInputBox">
-            <label for="urlBox">Enter News Website Link</label>
-            <input type="url" class="urlBox">
-            <input type="button" class="buttons" value="Submit Link">
-        </div>
-        <div class="insideInputBox">
-
-            <label for="urlBox">Enter Search Term</label>
-            <input type="url" class="urlBox">
-            <input type="button" class="buttons" value="Submit Query">
-
-        </div>
-        <div class="insideInputBox">
-            <label for="urlBox">Manually Enter Article</label>
-            <input type="button" class="buttons" value="Go to Page">
-
+    <!--title-->
+    <div class="news_lens">
+        <div class="title">
+            <h2>News Lens</h2>
         </div>
     </div>
-    <div class="footer">
-        <div>
-            NewsLens 2024 ©
-        </div>
 
-        <div>About Us</div>
+    <div class="box">
+        <form id="article-form">
+            <span>Enter URL:</span>
+            <br><textarea id="article-url" placeholder="Article URL"></textarea>
+            <button type="button" onclick="predictBiasFromUrl()">Go</button>
+
+            <br><br><span>Search Article:</span>
+            <br><textarea id="search-prompt" placeholder="Search prompt"></textarea>
+            <button type="button" onclick="searchArticle()">Go</button>
+
+            <br><br><span>Enter Article:</span>
+            <br><textarea id="headline" placeholder="Headline"></textarea>
+            <br><textarea id="content" placeholder="Content"></textarea>
+            <button type="button" onclick="predictBiasFromText()">Go</button>
+        </form>
+
+        <p id="result"></p> <!-- This will display the prediction result -->
     </div>
 
+    <script>
+        async function predictBiasFromText() {
+            // Get text input values
+            const headline = document.getElementById("headline").value;
+            const content = document.getElementById("content").value;
+            const articleText = headline + " " + content; // Combine headline and content for prediction
+    
+            // Send to Flask backend for prediction
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: articleText })
+            });
+    
+            // Get the prediction result and display it
+            const result = await response.json();
+            document.getElementById("result").innerText = 'Predicted Bias: ' + result.bias;
+        }
+    </script>
+    
 
 </body>
+
+
+
 
 </html>

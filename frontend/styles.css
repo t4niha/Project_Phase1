@@ -1,39 +1,74 @@
-body {
-    background-color: rgb(245, 245, 146);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
 }
+body{
 
-h1,
-h3 {
-    text-align: center;
-    text-decoration: underline;
-}
-
-.inputBox {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-
+    /*background: linear-gradient(90deg,rgb(204, 173, 17) 0%,rgb(204,173,17) 30%,#262902 30%,#262902 100%);*/
+    background: url(media.jpg);
 
 }
-
-.insideInputBox {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-
-}
-
-.footer {
-    display: flex;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+.news_lens{
+    position: relative;
     width: 100%;
-    background-color: red;
+    padding: 40px 100px;
+}
+
+.news_lens .title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: aliceblue;
+    
+}
+
+.box{
+    background-color: whitesmoke;
+     width: 600px;
+     text-decoration-color: rgb(36, 39, 212);
+     margin:auto;
+     padding: 40px;
+     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+     font-family: sans-serif;
+     display: flex;
+    gap: 20px;
+}
+
+
+
+.box span{
+    color: #162edc;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    
+}
+
+.box textarea{
+
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    /*border: 1px solid #333;*/
+    border: 1px solid rgb(171, 201, 231);
+      /*///////////*/
+   
+   
+   
+}
+
+.box button{
+    background-color: #162edc;
+    border-radius: 3px;
     color: white;
-    text-align: center;
-    justify-content: space-between;
+    padding: 5px;
+    
+   
+  
 }
