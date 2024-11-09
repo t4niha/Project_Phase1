@@ -24,7 +24,7 @@
         <form id="article-form">
             <span>Enter URL:</span>
             <br><textarea id="article-url" placeholder="Article URL"></textarea>
-            <button type="button" onclick="predictBiasFromUrl()">Go</button>
+            <button type="button" onclick="redirectToResultPage()">Go</button>
 
             <br><br><span>Search Article:</span>
             <br><textarea id="search-prompt" placeholder="Search prompt"></textarea>
@@ -39,7 +39,20 @@
         <p id="result"></p> <!-- This will display the prediction result -->
     </div>
 
-    <script>
+
+    <footer>
+        <a href="about-us.html" class="about-button">About Us</a>
+    </footer>
+
+</body>
+
+
+
+
+</html>
+
+
+<!-- <script>
         async function predictBiasFromText() {
             // Get text input values
             const headline = document.getElementById("headline").value;
@@ -59,12 +72,4 @@
             const result = await response.json();
             document.getElementById("result").innerText = 'Predicted Bias: ' + result.bias;
         }
-    </script>
-    
-
-</body>
-
-
-
-
-</html>
+    </script> -->
