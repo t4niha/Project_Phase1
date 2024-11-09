@@ -8,7 +8,7 @@
 }
 body{
 
-    /*background: linear-gradient(90deg,rgb(204, 173, 17) 0%,rgb(204,173,17) 30%,#262902 30%,#262902 100%);*/
+    background: linear-gradient(90deg,rgb(204, 173, 17) 0%,rgb(204,173,17) 30%,#262902 30%,#262902 100%);*/
     background: url(media.jpg);
 
 }
@@ -16,6 +16,7 @@ body{
     position: relative;
     width: 100%;
     padding: 40px 100px;
+    
 }
 
 .news_lens .title
@@ -25,6 +26,7 @@ body{
     align-items: center;
     font-size: 2em;
     color: aliceblue;
+    text-decoration: underline;
     
 }
 
