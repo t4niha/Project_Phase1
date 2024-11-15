@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Tektur";
+    
 }
 
 body {
 
-    background: linear-gradient(90deg, rgb(204, 173, 17) 0%, rgb(204, 173, 17) 30%, #262902 30%, #262902 100%);
-    */ background: url(media.jpg);
-
-
+    background-image: url(/frontend/images/body.jpg)
 }
 
 .news_lens {
@@ -25,11 +23,16 @@ body {
 .news_lens .title {
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: 2em;
     color: aliceblue;
     text-decoration: underline;
+ 
 
+}
+
+.news_lens .title h4
+{
+    margin-left: 200px;
 }
 
 .box {
@@ -58,6 +61,7 @@ body {
 
     padding: 10px;
     font-size: 1.1em;
+    width: 100%;
     outline: none;
     /*border: 1px solid #333;*/
     border: 1px solid rgb(171, 201, 231);
@@ -72,13 +76,15 @@ body {
     background-color: #162edc;
     border-radius: 3px;
     color: white;
-    padding: 5px;
+    padding-left: 65px;
+    font-size: larger;
+    text-align: center;
 
 
 
 }
 
-.back-button:hover {
+.back-button:hover, .box button:hover {
     background-color: #1013aa;
 }
 
