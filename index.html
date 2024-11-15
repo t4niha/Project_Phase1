@@ -29,24 +29,41 @@
         </div>
     </div>
 
-    <div class="box">
-        <form id="article-form">
-            <span>Enter News Article URL:</span>
-            <div><textarea id="article-url" placeholder="Article URL"></textarea></div>
-            <div><button type="button" onclick="redirectToResultPage()">Go</button></div>
-
-            <br><br><span>Write Keywords For Related Articles:</span>
-            <br><textarea id="search-prompt" placeholder="Search prompt"></textarea>
-            <div><button type="button" onclick="searchArticle()">Go</button></div>
-
-            <br><br><span>Manually Enter Article:</span>
-            <br><textarea id="headline" placeholder="Headline"></textarea>
-            <br><textarea id="content" placeholder="Content"></textarea>
-            <div><button type="button" onclick="predictBiasFromText()">Go</button></div>
-        </form>
-
-
-    </div>
+    <body>
+        <div class="container">
+            <form id="article-form">
+                <div class="form-section">
+                    <h2>Use Any of the Following Options to Start </h2>
+                    <div class="input-group">
+                        <label for="article-url">Enter News Article URL:</label>
+                        <textarea id="article-url" placeholder="Paste article URL here"></textarea>
+                    </div>
+                    <button type="button" onclick="redirectToResultPage()">Analyze URL</button>
+                </div>
+    
+                <div class="form-section">
+                    <h2>Related Articles Search</h2>
+                    <div class="input-group">
+                        <label for="search-prompt">Enter Keywords for Related Articles:</label>
+                        <textarea id="search-prompt" placeholder="Enter search keywords"></textarea>
+                    </div>
+                    <button type="button" onclick="searchArticle()">Search Articles</button>
+                </div>
+    
+                <div class="form-section">
+                    <h2>Manual Article Entry</h2>
+                    <div class="input-group">
+                        <label for="headline">Article Headline:</label>
+                        <textarea id="headline" placeholder="Enter article headline"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="content">Article Content:</label>
+                        <textarea id="content" placeholder="Enter article content"></textarea>
+                    </div>
+                    <button type="button" onclick="predictBiasFromText()">Analyze Content</button>
+                </div>
+            </form>
+        </div>
 
 
     <footer>

@@ -7,6 +7,11 @@
     font-family: "Tektur";
     
 }
+h2
+{
+    text-align: center;
+    text-decoration: underline;
+}
 
 body {
 
@@ -16,7 +21,7 @@ body {
 .news_lens {
     position: relative;
     width: 100%;
-    padding: 40px 100px;
+    padding: 10px 100px;
 
 }
 
@@ -49,27 +54,7 @@ body {
 
 
 
-.box span {
-    color: #162edc;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: 500;
 
-}
-
-.box textarea {
-
-    padding: 10px;
-    font-size: 1.1em;
-    width: 100%;
-    outline: none;
-    /*border: 1px solid #333;*/
-    border: 1px solid rgb(171, 201, 231);
-    /*///////////*/
-
-
-
-}
 
 .box button,
 .back-button {
@@ -84,9 +69,6 @@ body {
 
 }
 
-.back-button:hover, .box button:hover {
-    background-color: #1013aa;
-}
 
 .result {
     display: flex;
@@ -112,6 +94,7 @@ footer {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+    border: 20px;
 }
 
 .about-button:hover {
@@ -231,4 +214,71 @@ h1 {
     border-right: 10px solid transparent;
     border-top: 10px solid #333;
     transition: left 0.3s ease;
+}
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    margin-top: 0.5rem;
+    font-family: inherit;
+}
+
+textarea#article-url {
+    min-height: 40px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.buttonDiv
+{   
+    text-align: center;    
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: large;
+    text-align: center;
+    text-decoration: underline;
 }
