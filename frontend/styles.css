@@ -10,7 +10,6 @@
 h2
 {
     text-align: center;
-    text-decoration: underline;
 }
 
 body {
@@ -30,7 +29,6 @@ body {
     justify-content: center;
     font-size: 2em;
     color: aliceblue;
-    text-decoration: underline;
  
 
 }
@@ -89,7 +87,7 @@ footer {
 
 .about-button {
     padding: 5px;
-    background-color: #28a745;
+    background-color: #26748c;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -147,13 +145,11 @@ h1 {
 }
 
 .aboutUs {
-    text-decoration: underline;
     color: white;
     font-size: x-large;
 }
 
 .card-container h2 {
-    text-decoration: underline;
 }
 
 .bar-container {
@@ -257,7 +253,7 @@ textarea#article-url {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #26748c;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -280,5 +276,13 @@ label {
     color: #555;
     font-size: large;
     text-align: center;
-    text-decoration: underline;
+}
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e0e0e0;
 }

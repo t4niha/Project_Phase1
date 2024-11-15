@@ -38,7 +38,10 @@
                         <label for="article-url">Enter News Article URL:</label>
                         <textarea id="article-url" placeholder="Paste article URL here"></textarea>
                     </div>
+                    <div class = "buttonDiv">
+                    <div class = "buttonDiv">
                     <button type="button" onclick="redirectToResultPage()">Analyze URL</button>
+                    </div></div>
                 </div>
     
                 <div class="form-section">
@@ -47,8 +50,9 @@
                         <label for="search-prompt">Enter Keywords for Related Articles:</label>
                         <textarea id="search-prompt" placeholder="Enter search keywords"></textarea>
                     </div>
+                    <div class = "buttonDiv">
                     <button type="button" onclick="searchArticle()">Search Articles</button>
-                </div>
+                </div></div>
     
                 <div class="form-section">
                     <h2>Manual Article Entry</h2>
@@ -60,15 +64,18 @@
                         <label for="content">Article Content:</label>
                         <textarea id="content" placeholder="Enter article content"></textarea>
                     </div>
+                    <div class = "buttonDiv">
                     <button type="button" onclick="predictBiasFromText()">Analyze Content</button>
-                </div>
+                </div></div>
             </form>
         </div>
 
 
-    <footer>
-        <a href="/frontend/pages/aboutUs.html" class="about-button">About Us</a>
-    </footer>
+        <footer>
+            <nav>
+                <a href="./aboutUs.html" class="about-button">About Us</a>
+            </nav>
+        </footer>
 
 </body>
 
