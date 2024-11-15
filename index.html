@@ -61,24 +61,3 @@
 </html>
 
 
-<!-- <script>
-        async function predictBiasFromText() {
-            // Get text input values
-            const headline = document.getElementById("headline").value;
-            const content = document.getElementById("content").value;
-            const articleText = headline + " " + content; // Combine headline and content for prediction
-    
-            // Send to Flask backend for prediction
-            const response = await fetch('/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ text: articleText })
-            });
-    
-            // Get the prediction result and display it
-            const result = await response.json();
-            document.getElementById("result").innerText = 'Predicted Bias: ' + result.bias;
-        }
-    </script> -->
