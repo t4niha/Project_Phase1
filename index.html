@@ -7,7 +7,13 @@
         News Lens
     </title>
     <link rel="stylesheet" href="frontend/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Source+Code+Pro:ital,wght@0,566;1,566&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+
     <script src="scripts.js" defer></script>
 
 </head>
@@ -16,27 +22,30 @@
     <!--title-->
     <div class="news_lens">
         <div class="title">
-            <h2>News Lens</h2>
+            <h1>News Lens</h1>
+        </div>
+        <div class="title">
+            <h4>-Know your news better </h4>
         </div>
     </div>
 
     <div class="box">
         <form id="article-form">
-            <span>Enter URL:</span>
-            <br><textarea id="article-url" placeholder="Article URL"></textarea>
-            <button type="button" onclick="redirectToResultPage()">Go</button>
+            <span>Enter News Article URL:</span>
+            <div><textarea id="article-url" placeholder="Article URL"></textarea></div>
+            <div><button type="button" onclick="redirectToResultPage()">Go</button></div>
 
-            <br><br><span>Search Article:</span>
+            <br><br><span>Write Keywords For Related Articles:</span>
             <br><textarea id="search-prompt" placeholder="Search prompt"></textarea>
-            <button type="button" onclick="searchArticle()">Go</button>
+            <div><button type="button" onclick="searchArticle()">Go</button></div>
 
-            <br><br><span>Enter Article:</span>
+            <br><br><span>Manually Enter Article:</span>
             <br><textarea id="headline" placeholder="Headline"></textarea>
             <br><textarea id="content" placeholder="Content"></textarea>
-            <button type="button" onclick="predictBiasFromText()">Go</button>
+            <div><button type="button" onclick="predictBiasFromText()">Go</button></div>
         </form>
 
-        <p id="result"></p> <!-- This will display the prediction result -->
+
     </div>
 
 
