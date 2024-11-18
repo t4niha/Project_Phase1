@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>
+        News Lens
+    </title>
+    <link rel="stylesheet" href="frontend/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Source+Code+Pro:ital,wght@0,566;1,566&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts.js" defer></script>
+
+</head>
+
+<body>
+    <!--title-->
+    <div class="news_lens">
+        <div class="title">
+            <h1>News Lens</h1>
+        </div>
+        <div class="title">
+            <h4>-Know your news better </h4>
+        </div>
+    </div>
+
+    <body>
+        <div class="container">
+            <form id="article-form">
+                <div class="form-section">
+                    <h2>Use Any of the Following Options to Start </h2>
+                    <div class="input-group">
+                        <label for="article-url">Enter News Article URL:</label>
+                        <textarea id="article-url" placeholder="Paste article URL here"></textarea>
+                    </div>
+                    <div class = "buttonDiv">
+                    <div class = "buttonDiv">
+                    <button type="button" onclick="redirectToResultPage()">Analyze URL</button>
+                    </div></div>
+                </div>
+    
+                <div class="form-section">
+                    <h2>Related Articles Search</h2>
+                    <div class="input-group">
+                        <label for="search-prompt">Enter Keywords for Related Articles:</label>
+                        <textarea id="search-prompt" placeholder="Enter search keywords"></textarea>
+                    </div>
+                    <div class = "buttonDiv">
+                    <button type="button" onclick="searchArticle()">Search Articles</button>
+                </div></div>
+    
+                <div class="form-section">
+                    <h2>Manual Article Entry</h2>
+                    <div class="input-group">
+                        <label for="headline">Article Headline:</label>
+                        <textarea id="headline" placeholder="Enter article headline"></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label for="content">Article Content:</label>
+                        <textarea id="content" placeholder="Enter article content"></textarea>
+                    </div>
+                    <div class = "buttonDiv">
+                    <button type="button" onclick="predictBiasFromText()">Analyze Content</button>
+                </div></div>
+            </form>
+        </div>
+
+
+        <footer>
+            <nav>
+                <a href="./frontend/pages/aboutUs.html" class="about-button">About Us</a>
+            </nav>
+        </footer>
+
+</body>
+
+
+
+
+</html>
+
+
