@@ -1,20 +1,24 @@
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Tektur";
-    
+
 }
-h2
-{
+
+h2 {
+    text-align: center;
+}
+
+h3 {
     text-align: center;
 }
 
 body {
 
-    background-image: url(/frontend/images/body.jpg)
+    background-image: url(/static/body.jpg);
+    padding-bottom: 60px;
+    
 }
 
 .news_lens {
@@ -29,12 +33,11 @@ body {
     justify-content: center;
     font-size: 2em;
     color: aliceblue;
- 
+
 
 }
 
-.news_lens .title h4
-{
+.news_lens .title h4 {
     margin-left: 200px;
 }
 
@@ -56,33 +59,70 @@ body {
 
 .box button,
 .back-button {
-    background-color: #162edc;
-    border-radius: 3px;
+    background-color: #26748c;
     color: white;
-    padding-left: 65px;
-    font-size: larger;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+
+
+}
+
+
+/* Styling for the title section */
+.news_lens .title h2 {
+    font-size: 2rem;
+    /* Adjust the size of the title */
     text-align: center;
-
-
+    margin-bottom: 20px;
+    font-size: 50px;
 
 }
 
-
+/* Styling for the result container */
 .result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: larger;
+    text-align: center;
+    /* Center the content */
+    margin-top: 30px;
 }
+
+/* Styling for the "Predicted Bias" text */
+.result p {
+    font-size: 1.2rem;
+    /* Slightly bigger than normal text */
+    font-weight: bold;
+    /* Make the text bold */
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Styling for the prediction result */
+#prediction-result {
+    font-size: 3rem;
+    /* Large font size */
+    font-weight: bold;
+    /* Make it bold */
+    color: #e5e8ec;
+    /* Dark color for the result */
+    margin-top: 10px;
+    text-transform: uppercase;
+    /* Make the text uppercase for emphasis */
+}
+
 
 footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     text-align: center;
     padding: 20px;
-
+    background-color: #f9f9f9; /* Add a background color for visibility */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    z-index: 1000; /* Ensure it's above other elements */
 }
 
 .about-button {
@@ -96,7 +136,8 @@ footer {
 }
 
 .about-button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 .about-section {
@@ -149,68 +190,85 @@ h1 {
     font-size: x-large;
 }
 
-.card-container h2 {
-}
 
 .bar-container {
-
-    position: fixed;
-    top: 300px;
-    left: 0;
-    right: 0;
-
+    position: relative;
+    top: 100px;
+    /* Moves the container down */
+    width: 100%;
+    /* Spans the full width of its parent */
+    max-width: 1200px;
+    /* Optional: Sets a max width for larger screens */
+    margin: 0 auto;
+    /* Centers the container horizontally */
 }
 
 .bar {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 30px;
+    /* Spans the full width of the bar-container */
+    height: 40px;
+    /* Sets a consistent height for the bar */
     border-radius: 8px;
+    /* Adds rounded corners */
     overflow: hidden;
-    margin-bottom: 20px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-
+    /* Ensures children don’t overflow */
+    box-sizing: border-box;
+    /* Includes padding and border in width/height */
 }
 
 .region {
     flex: 1;
+    /* Each region takes equal space */
+    text-align: center;
+    /* Centers text horizontally */
+    padding: 10px;
+    /* Adds inner spacing */
+    font-size: 16px;
+    /* Adjusts text size */
+    font-weight: 500;
+    /* Adds a consistent weight */
+    color: white;
+    /* Sets text color for better contrast */
 }
 
 .blue {
-    background-color: #3498db;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
+    background-color: #2196F3;
+    /* Blue for "Left" region */
 }
 
 .green {
-    background-color: #2ecc71;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
+    background-color: #4CAF50;
+    /* Green for "Neutral" region */
 }
 
 .red {
-    background-color: #e74c3c;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
+    background-color: #F44336;
+    /* Red for "Right" region */
 }
-
 
 .arrow {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(2, 53, 68, 0.548);
+    background-image: url('/static/arrow.png');
+    /* Path to arrow image */
+    background-size: contain;
+    /* Ensures the image fits within the element */
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
-    top: 40px;
+    /* Position relative to bar-container */
+    top: 50px;
+    /* Adjusts vertical position relative to the bar */
     left: 0;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #333;
-    transition: left 0.3s ease;
+    /* Default starting position */
+    transition: left 6.5s ease-in-out;
+    /* Smooth sliding effect */
 }
+
+
 .container {
     max-width: 800px;
     margin: 2rem auto;
@@ -238,7 +296,10 @@ h1 {
     margin-bottom: 1rem;
 }
 
-textarea {
+
+
+textarea,
+input[type="text"] {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -246,29 +307,54 @@ textarea {
     min-height: 100px;
     margin-top: 0.5rem;
     font-family: inherit;
+    resize: vertical;
+    max-height: 200px;
 }
+
+input#url {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 50px;
+    margin-top: 0.5rem;
+    font-family: inherit;
+}
+
 
 textarea#article-url {
     min-height: 40px;
+
 }
+
+
 
 button {
     background-color: #26748c;
     color: white;
     border: none;
+    font-size: 15px;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
-}
-.buttonDiv
-{   
-    text-align: center;    
+    padding: 10px 10px;
+    margin: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.buttonDiv {
+    text-align: center;
+
 }
+
+
+button:hover,
+.back-button:hover {
+    background-color: #0056b3;
+
+}
+
+
 
 label {
     display: block;
@@ -277,12 +363,217 @@ label {
     font-size: large;
     text-align: center;
 }
-footer {
+
+footer nav {
     background-color: #ffffff;
-    padding: 20px 0;
+    padding: 20px;
+    margin-left: -20px;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
     border-top: 1px solid #e0e0e0;
+    display: flex;
+    /* Arrange children in a row */
+    align-items: center;
+    /* Vertically align items */
+    justify-content: center;
+    /* Center both buttons horizontally */
+    gap: 10px;
+    /* Add spacing between buttons */
+
+}
+
+
+
+
+#searchTerm {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    color: #f2eaea;
+    font-size: x-large;
+}
+
+#searchTerm {
+    color: #0f0d0d;
+    font-size: larger;
+}
+
+.git {
+    display: inline-block;
+    /* Ensure it behaves like a block for proper sizing */
+    background-image: url('/static/megacat.jpg');
+    /* Path to your GitHub logo image */
+    background-size: contain;
+    /* Ensure the image scales correctly */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center;
+    /* Center the image within the element */
+    width: 40px;
+    /* Adjust to make the button appropriately sized */
+    height: 40px;
+    text-decoration: none;
+    /* Remove underline from link */
+    border-radius: 50%;
+    /* Optional: makes the button circular */
+    background-color: #ffffff;
+    /* Background color behind the image */
+    margin-left: 10px;
+    /* Add some spacing if needed */
+    ;
+}
+
+.git:hover {
+    background-color: #e60e0e;
+    /* Optional: Change background color on hover */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    transform: scale(1.15);
+
+
+}
+
+.links-container,
+.links-container1 {
+    width: 100%;
+    max-width: 600px;
+    margin: 25px auto;
+    margin-bottom: 200px !important;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* .links-container {
+    margin-top: 25px;
+    margin-bottom: 200px;
+} */
+
+.links-container h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* .links-container1 {
+    margin-top: 25px;
+    margin-bottom: 100px;
+} */
+
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-item:hover {
+    background-color: #f0f8ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.link-item a {
+    color: #3498db;
+    font-size: 1rem;
+    text-decoration: none;
+    flex: 1;
+}
+
+.link-item a:hover {
+    text-decoration: underline;
+}
+
+.link-item button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-item button:hover {
+    background-color: #2979b3;
+    transform: scale(1.05);
+}
+
+/* Info Box Styles */
+.info-box {
+    margin-top: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 90%;
+    /* Adjusts to screen size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    word-wrap: break-word;
+    /* Prevents long text from overflowing */
+    margin-left: auto;
+    margin-right: auto;
+    /* Centers the box */
+}
+
+/* Title and Text Styles */
+.info-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+.info-box p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-box a {
+    color: #0066cc;
+    text-decoration: none;
+    word-wrap: break-word;
+    /* Prevent long URLs from breaking layout */
+}
+
+.info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .info-box {
+        max-width: 600px;
+        /* Larger max-width for tablets and desktops */
+    }
+}
+
+@media (max-width: 480px) {
+    .info-box {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .info-box h3 {
+        font-size: 1rem;
+        /* Reduce font size for smaller screens */
+    }
+
+    .info-box p {
+        font-size: 0.9rem;
+        /* Smaller text on smaller screens */
+    }
 }
