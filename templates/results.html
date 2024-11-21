@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <!-- <script src="/static/scripts.js" defer></script> -->
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Source+Code+Pro:ital,wght@0,566;1,566&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <a href="/" class="back-button">Back</a>
+
+    <div class="news_lens">
+        <div class="title">
+            <h2>Prediction Result</h2>
+        </div>
+    </div>
+
+    <div class="result">
+        <p>Predicted Bias is:</p>
+        <div id="prediction-result">{{ prediction }}</div>
+    </div>
+
+    <div class="bar-container">
+        <div class="bar">
+            <div class="region blue">Left</div>
+            <div class="region green">Neutral</div>
+            <div class="region red">Right</div>
+        </div>
+        <div class="arrow" id="arrow" data-position="{{ arrow_position }}"></div>
+    </div>
+
+    <div class="info-box">
+        <h3>Article Information</h3>
+        <p><strong>URL:</strong> <a href="{{ url }}" target="_blank">{{ url }}</a></p>
+        <p><strong>Domain:</strong> {{ domain_name }}</p>
+        <p><strong>Title:</strong> {{ title }}</p>
+    </div>
+
+    <div class="links-container1">
+        <h3>Related Links</h3>
+
+        {% if articles %}
+        {% for article in articles %}
+        <form action="/analyze" method="POST" id="article-form" onsubmit="return validateDomain(event)">
+            <div class="link-item">
+                <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+                <input type="hidden" name="url" value="{{ article.url }}">
+                <button type="submit">Analyze</button>
+            </div>
+        </form>
+        {% endfor %}
+        {% else %}
+        <p>No related articles found. Please try a different search term.</p>
+        {% endif %}
+    </div>
+
+
+    <footer>
+        <nav>
+            <a href="/aboutus" class="about-button">About Us</a>
+            <a href="https://github.com/t4niha/Project_Phase1" class="git" target="_blank" title="View on GitHub"
+                rel="noopener"></a>
+        </nav>
+    </footer>
+
+
+
+</body>
+
+
+
+
+</html>
