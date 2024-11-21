@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Related Links</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Stencil+One&family=Source+Code+Pro:ital,wght@0,566;1,566&family=Tektur:wght@400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+
+
+
+</head>
+
+<body>
+    <a href="/" class="back-button">Back</a>
+
+    <div class="news_lens">
+        <div class="title">
+            <h1>News Lens</h1>
+        </div>
+        <div class="title">
+            <h4>-Know your news better </h4>
+        </div>
+    </div>
+
+    <div class="links-container">
+        <h3>Related Links</h3>
+
+        {% if articles %}
+        {% for article in articles %}
+        <form action="/analyze" method="POST" id="article-form">
+            <div class="link-item">
+                <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+                <input type="hidden" name="url" value="{{ article.url }}">
+                <button type="submit">Analyze</button>
+            </div>
+        </form>
+        {% endfor %}
+        {% else %}
+        <p>No related articles found. Please try a different search term.</p>
+        {% endif %}
+    </div>
+    </div>
+
+    <footer>
+        <nav>
+            <a href="/aboutus" class="about-button">About Us</a>
+            <a href="https://github.com/t4niha/Project_Phase1" class="git" target="_blank" title="View on GitHub"
+                rel="noopener"></a>
+        </nav>
+    </footer>
+
+
+
+</body>
+
+</html>
