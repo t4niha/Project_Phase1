@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+transformers
+spacy
+newsapi-python
+pydantic
+jinja2

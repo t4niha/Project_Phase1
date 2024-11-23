@@ -60,8 +60,11 @@ async def analyze_and_search(request: Request, url: str = Form(...)):
         print(f"Original Title: {ogTitle}")
         # ogTitle1 = urlButton3(url)
         # print(f"Cleaned Title: {ogTitle1}")  
-
-        ogTitle1 = extract_keywords(ogTitle)  
+        ogTitle1 = clean_title(ogTitle)
+        print(f"Cleaned Title: {ogTitle1}")
+        ogTitle1 = extract_keywords(ogTitle) 
+        print(f"Extracted Keywords From Title: {ogTitle1}")
+        ogTitle1 = refine_keywords(ogTitle1) 
         print(f"Refined Keywords From Title: {ogTitle1}")  
         articles = urlButton2(ogTitle1)
 

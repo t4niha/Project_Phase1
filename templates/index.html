@@ -7,7 +7,7 @@
         News Lens
     </title>
     <link rel="stylesheet" href="/static/styles.css">
-
+    <link rel="icon" type="image/x-icon" href="/static/n.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -47,13 +47,13 @@
 
                         <div class="links">
                             <button type="button"
-                                onclick="pasteUrl('https://edition.cnn.com/2024/11/08/politics/doj-charges-three-iranian-plot-to-kill-donald-trump/index.html')">CNN</button>
+                                onclick="pasteUrl('https://edition.cnn.com/2024/10/29/politics/video/obama-puerto-rico-trump-philadelphia-digvid')">CNN</button>
                             <button type="button"
                                 onclick="pasteUrl('https://www.dailymail.co.uk/news/article-14107179/how-old-Americans-Joe-Biden-really-video-president.html')">DailyMail</button>
                             <button type="button"
-                                onclick="pasteUrl('https://www.wired.com/story/election-violence-is-already-here/')">Wired</button>
+                                onclick="pasteUrl('https://www.wired.com/story/us-patent-trademark-office-internally-banned-generative-ai/')">Wired</button>
                             <button type="button"
-                                onclick="pasteUrl('https://www.aljazeera.com/news/2024/10/20/indias-envoy-to-canada-rejects-involvement-in-sikh-activists-killing')">Aljazeera</button>
+                                onclick="pasteUrl('https://www.aljazeera.com/news/2024/8/5/timeline-sheikh-hasinas-reign-ends-after-15-years')">Aljazeera</button>
                             <button type="button"
                                 onclick="pasteUrl('https://www.usatoday.com/story/sports/columnist/nancy-armour/2024/11/20/donald-trump-dance-athletes-celebrations-regret/76455082007/')">UsaToday</button>
                         </div>
@@ -64,7 +64,7 @@
 
             </form>
 
-            <form method="POST" action="/search_articles" >
+            <form method="POST" action="/search_articles">
                 <div class="form-section">
 
                     <div class="input-group">
@@ -82,7 +82,8 @@
 
                     <div class="input-group">
                         <label for="content">Enter Article Headline</label>
-                        <input type="text" id="headline"name="headline" class="headlineField" placeholder="Enter Headline">
+                        <input type="text" id="headline" name="headline" class="headlineField"
+                            placeholder="Enter Headline">
                     </div>
                     <div class="input-group">
                         <label for="content">Enter Article Content Manually</label>
